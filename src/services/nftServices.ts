@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import DataNFTAbi from './DataNFTAbi.json';  // i'll need to export this from my compiled contract
+import DataNFTAbi from './DataNFTAbi.json';
 
 const CONTRACT_ADDRESS = import.meta.env.VITE_NFT_CONTRACT_ADDRESS;
 
@@ -12,10 +12,23 @@ export async function mintNFT(tokenURI: string, validityPeriod: number, terms: s
   const contract = new ethers.Contract(CONTRACT_ADDRESS, DataNFTAbi, signer);
 
   try {
-    const tx = await contract.mintNFT(signer.getAddress(), tokenURI, validityPeriod, terms);
+    const tx = await contract.mintNFT(await signer.getAddress(), tokenURI, validityPeriod, terms);
     const receipt = await tx.wait();
-    const event = receipt.events.find((e: any) => e.event === 'Transfer');
-    return event.args.tokenId.toString();
+
+    console.log("Transaction Receipt:", receipt); // Debug log
+
+    // Access events in Ethers.js
+    const event = receipt.logs.find((log: any) => log.fragment && log.fragment.name === "Transfer");
+
+    if (!event) {
+      throw new Error("Transfer event not found in transaction receipt");
+    }
+
+    // Extract `tokenId` from event args
+    const tokenId = event.args.tokenId.toString();
+    console.log("Minted NFT Token ID:", tokenId);
+
+    return tokenId;
   } catch (err) {
     console.error("Error minting NFT:", err);
     throw err;
