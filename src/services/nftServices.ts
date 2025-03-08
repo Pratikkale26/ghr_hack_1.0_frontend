@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import DataNFTAbi from './DataNFTAbi.json';
+import DataNFTAbi from '../abis/DataNFTAbi.json';
 
 const CONTRACT_ADDRESS = import.meta.env.VITE_NFT_CONTRACT_ADDRESS;
 
