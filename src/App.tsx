@@ -4,6 +4,8 @@ import { WagmiProvider } from 'wagmi'
 import { config } from './config'
 import { Appbar } from './components/Appbar'
 import FileUpload from './components/FileUpload'
+import GetIPFSLinks from './components/GetIPFSLinks'
+// import { DecryptData } from './components/DecryptData'
 // import Marketplace from './components/MarketPlace'
  
 const queryClient = new QueryClient()
@@ -15,6 +17,8 @@ export default function App() {
          <Appbar />
          <FileUpload onUploadSuccess={(cid: string) => console.log(cid)} />
           {/* <Marketplace /> */}
+          {/* <DecryptData tokenId="" /> */}
+          <GetIPFSLinks />
        </QueryClientProvider> 
      </WagmiProvider>
    )
