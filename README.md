@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+# **NFTfy – Decentralized Data Marketplace**  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+NFTfy is a Decentralized **Web3-powered marketplace** that allows individuals and businesses to **NFTfy their datasets** and securely sell them with **custom licensing** via blockchain.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## **🚀 Problem Statement**  
+🔹 **Centralized platforms** control & monetize user data unfairly.  
+🔹 **No ownership, privacy risks, and lack of transparency** in traditional data markets.  
 
-## Expanding the ESLint configuration
+## **✅ Solution: NFT-Based Data Licensing**  
+🔹 Users **mint datasets as NFTs** with **custom terms** (personal, commercial, resale).  
+🔹 **Only NFT owners** can access data stored on **IPFS**.  
+🔹 If the NFT is **sold or transferred**, access is **automatically revoked** from the previous owner.  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## **🔹 Key Features**  
+✅ **True Ownership** – Users control access & pricing.  
+✅ **Custom Licensing** – Define how data can be used (personal, commercial, resale).  
+✅ **Secure Access** – Only NFT holders can unlock encrypted data.  
+✅ **Royalties & Transparency** – Earn from resales, blockchain ensures fairness.
+✅ **Decentralized Storage (IPFS)** – No reliance on central authorities.  
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## **🔹 Use Cases**  
+🔹 **AI Training** – High-quality datasets for ML models.  
+🔹 **Medical Research** – Secure, compliant data sharing.  
+🔹 **Financial Analytics** – Tokenized market data.  
+🔹 **Content Creators** – Monetize art, videos, and graphics.  
+🔹 **Music & Movie Industry** – Decentralized digital licensing.  
+🔹 **Blogs & Research Papers** – Fair monetization of content.  
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+---
+
+## **🔹 Tech Stack**  
+🛠 **Frontend:** React, TypeScript, TailwindCSS, Wagmi  
+🛠 **Smart Contracts:** Solidity, Foundry  
+🛠 **Storage:** Pinata (IPFS)  
+🛠 **Blockchain:** Ethereum (Holestky Testnet)  
+🛠 **Wallet & Authentication:** MetaMask, Wagmi  
+
+---
+
+## **👥 Built by Mugiwara Devs**  
+🔹 **Slogan:** *"As long as I am alive, there are infinite possibilities."*  
+
+🚀 **NFTfy is the future of decentralized data ownership!**  
